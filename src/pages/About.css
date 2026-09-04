@@ -1,0 +1,27 @@
+.about {
+  min-height: 100vh;
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
