@@ -18,6 +18,10 @@ function Navbar() {
         <li>
           <Link to="/skills">Competenze</Link>
         </li>
+
+        <li>
+          <Link to="/hobbies">Hobby</Link>
+        </li>
       </ul>
     </nav>
   )
