@@ -1,0 +1,13 @@
+.hobby-card {
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.hobby-card h2 {
+  margin-bottom: 15px;
+}
+
+.hobby-card p {
+  line-height: 1.6;
+}
