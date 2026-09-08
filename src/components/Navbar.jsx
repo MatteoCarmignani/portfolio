@@ -22,6 +22,10 @@ function Navbar() {
         <li>
           <Link to="/hobbies">Hobby</Link>
         </li>
+
+        <li>
+          <Link to="/contact">Contatti</Link>
+        </li>
       </ul>
     </nav>
   )

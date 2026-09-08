@@ -1,0 +1,40 @@
+.contact {
+  min-height: 100vh;
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.contact-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-links a {
+  padding: 12px 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  background-color: white;
+  color: #111;
+}
