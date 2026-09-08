@@ -1,25 +1,73 @@
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 73px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 50px;
 }
 
 .hero-content {
   max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero-content p {
+.hero-intro {
   font-size: 20px;
+  margin-bottom: 15px;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 64px;
-  margin: 10px 0;
+  line-height: 1.1;
+  margin-bottom: 25px;
 }
 
-.hero-content h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.hero-description {
+  max-width: 650px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-button {
+  padding: 12px 24px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: #111;
+}
+
+.hero-button.secondary {
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
