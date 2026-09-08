@@ -1,12 +1,20 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
   return (
     <nav className="navbar">
+
       <h2>Matteo</h2>
 
-      <ul className="navbar-menu">
+      <button className="menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        ☰
+      </button>
+
+      <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
         <NavLink to="/" end>
           Home
         </NavLink>
