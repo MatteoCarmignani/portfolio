@@ -23,7 +23,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/matteo-carmignani-a760b63a0/"
             target="_blank"
             rel="noopener noreferrer"
           >
