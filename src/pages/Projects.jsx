@@ -6,6 +6,7 @@ function Projects() {
   const projects = [
     {
       title: 'Boolflix',
+      slug: 'boolflix',
       description:
         'Applicazione web ispirata alle piattaforme di streaming, realizzata con React e API esterne.',
       image: '/projects/boolflix.jpg',
@@ -15,22 +16,24 @@ function Projects() {
     },
 
     {
-    title: 'Booroad',
-    description:
+      title: 'Booroad',
+      slug: 'booroad',
+      description:
         'Applicazione web per la gestione dei partecipanti a viaggi organizzati, realizzata come progetto di gruppo durante il percorso di formazione.',
-    image: '/projects/booroad.jpg',
-    technologies: ['React', 'JavaScript', 'CSS', 'Git'],
-    github: 'https://github.com/MatteoCarmignani/cs-booroad-app',
-    demo: ''
+      image: '/projects/booroad.jpg',
+      technologies: ['React', 'JavaScript', 'CSS', 'Git'],
+      github: '',
+      demo: ''
     },
 
     {
       title: 'Team Project',
+      slug: 'team-project',
       description:
         'Progetto realizzato in gruppo durante il percorso di formazione.',
       image: '/projects/team-project.jpg',
       technologies: ['React', 'JavaScript', 'Git'],
-      github: 'https://github.com/MatteoCarmignani/project-work-nonserveraniente',
+      github: '',
       demo: ''
     }
   ]
@@ -44,7 +47,7 @@ function Projects() {
           Cosa ho realizzato
         </p>
 
-        <h1>I miei progetti più importanti</h1>
+        <h1>I miei progetti</h1>
 
         <div className="projects-list">
 
@@ -52,6 +55,7 @@ function Projects() {
             <ProjectCard
               key={project.title}
               title={project.title}
+              slug={project.slug}
               description={project.description}
               image={project.image}
               technologies={project.technologies}

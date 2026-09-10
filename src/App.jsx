@@ -7,6 +7,7 @@ import Skills from './pages/Skills'
 import Hobbies from './pages/Hobbies'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import ProjectDetail from './pages/ProjectDetail'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/hobbies" element={<Hobbies />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
