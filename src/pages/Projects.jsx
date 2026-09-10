@@ -20,7 +20,7 @@ function Projects() {
         'Applicazione web per la gestione dei partecipanti a viaggi organizzati, realizzata come progetto di gruppo durante il percorso di formazione.',
     image: '/projects/booroad.jpg',
     technologies: ['React', 'JavaScript', 'CSS', 'Git'],
-    github: '',
+    github: 'https://github.com/MatteoCarmignani/cs-booroad-app',
     demo: ''
     },
 
