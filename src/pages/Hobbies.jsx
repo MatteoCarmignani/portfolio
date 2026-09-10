@@ -2,8 +2,36 @@ import HobbyCard from '../components/HobbyCard'
 import './Hobbies.css'
 
 function Hobbies() {
+
+  const hobbies = [
+    {
+      title: 'Videogiochi',
+      description:
+        'Mi piacciono videogiochi di generi diversi e mi interessa soprattutto scoprire nuovi mondi, meccaniche e modi di raccontare una storia.'
+    },
+
+    {
+      title: 'Tecnologia',
+      description:
+        'Sono curioso delle nuove tecnologie e mi piace capire come funzionano gli strumenti che utilizzo ogni giorno.'
+    },
+
+    {
+      title: 'Dungeons & Dragons',
+      description:
+        'Mi piace giocare a D&D e creare personaggi, avventure e mondi insieme agli altri giocatori.'
+    },
+
+    {
+      title: 'Fantasy',
+      description:
+        'Il fantasy è uno dei generi che preferisco, soprattutto per la possibilità di esplorare mondi e storie completamente diversi dalla realtà.'
+    }
+  ]
+
   return (
     <main className="hobbies">
+
       <div className="hobbies-content">
 
         <p className="section-subtitle">
@@ -12,31 +40,20 @@ function Hobbies() {
 
         <h1>Hobby e passioni</h1>
 
-        <p className="hobbies-intro">
-          Quando non sono davanti al computer mi piace dedicare
-          il mio tempo alle mie passioni.
-        </p>
-
         <div className="hobbies-list">
 
-          <HobbyCard
-            title="🎮 Videogiochi"
-            description="Sono appassionato di videogiochi e mi piace spaziare tra generi diversi, scoprendo nuove esperienze e mondi."
-          />
-
-          <HobbyCard
-            title="🎲 Giochi di ruolo"
-            description="Mi piacciono i giochi di ruolo, soprattutto Dungeons & Dragons, sia come giocatore che come creatore di avventure."
-          />
-
-          <HobbyCard
-            title="💻 Tecnologia"
-            description="La tecnologia è una delle mie passioni principali e mi piace sperimentare nuovi strumenti e imparare nuove tecnologie."
-          />
+          {hobbies.map((hobby) => (
+            <HobbyCard
+              key={hobby.title}
+              title={hobby.title}
+              description={hobby.description}
+            />
+          ))}
 
         </div>
 
       </div>
+
     </main>
   )
 }
