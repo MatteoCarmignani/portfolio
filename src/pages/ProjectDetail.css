@@ -1,29 +1,17 @@
 .project-detail {
   min-height: calc(100vh - 73px);
-  padding: 80px 50px;
-
-  display: flex;
-  align-items: center;
+  padding: 60px 50px;
 }
 
 .project-detail-content {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-}
-
-.project-detail h1 {
-  font-size: 56px;
-  margin-bottom: 25px;
-}
-
-.project-detail p {
-  font-size: 20px;
-  margin-bottom: 40px;
 }
 
 .back-button {
   display: inline-block;
+  margin-bottom: 40px;
 
   padding: 12px 24px;
 
@@ -41,18 +29,120 @@
   color: #111;
 }
 
+.project-detail-image {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 40px;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-detail-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+.project-detail h1 {
+  font-size: 64px;
+  margin-bottom: 25px;
+}
+
+.project-detail-description {
+  max-width: 800px;
+
+  font-size: 22px;
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.project-detail-full-description {
+  max-width: 800px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  opacity: 0.75;
+
+  margin-bottom: 50px;
+}
+
+.project-detail-technologies h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 40px;
+}
+
+.technology-list span {
+  padding: 8px 14px;
+
+  border: 1px solid #444;
+  border-radius: 20px;
+
+  font-size: 14px;
+}
+
+.project-detail-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-detail-links a {
+  padding: 12px 24px;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  color: white;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.project-detail-links a:hover {
+  background-color: white;
+  color: #111;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
   .project-detail {
-    padding: 60px 20px;
+    padding: 40px 20px;
+  }
+
+  .project-detail-image {
+    height: 250px;
   }
 
   .project-detail h1 {
     font-size: 44px;
   }
 
-  .project-detail p {
+  .project-detail-description {
+    font-size: 19px;
+  }
+
+  .project-detail-full-description {
     font-size: 17px;
+  }
+
+  .project-detail-links {
+    flex-direction: column;
+  }
+
+  .project-detail-links a {
+    text-align: center;
   }
 }
