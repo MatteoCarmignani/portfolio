@@ -1,43 +1,9 @@
 import { useState } from 'react'
 import ProjectCard from '../components/ProjectCard'
 import './Projects.css'
+import projects from '../data/projects'
 
 function Projects() {
-
-  const projects = [
-    {
-      title: 'Boolflix',
-      slug: 'boolflix',
-      description:
-        'Applicazione web ispirata alle piattaforme di streaming, realizzata con React e API esterne.',
-      image: '/projects/boolflix.jpg',
-      technologies: ['React', 'JavaScript', 'API', 'CSS'],
-      github: 'https://github.com/MatteoCarmignani/react-boolflix',
-      demo: ''
-    },
-
-    {
-      title: 'Booroad',
-      slug: 'booroad',
-      description:
-        'Applicazione web per la gestione dei partecipanti a viaggi organizzati, realizzata come progetto di gruppo durante il percorso di formazione.',
-      image: '/projects/booroad.jpg',
-      technologies: ['React', 'JavaScript', 'CSS', 'Git'],
-      github: '',
-      demo: ''
-    },
-
-    {
-      title: 'Team Project',
-      slug: 'team-project',
-      description:
-        'Progetto realizzato in gruppo durante il percorso di formazione.',
-      image: '/projects/team-project.jpg',
-      technologies: ['React', 'JavaScript', 'Git'],
-      github: '',
-      demo: ''
-    }
-  ]
 
   const [currentPage, setCurrentPage] = useState(0)
 

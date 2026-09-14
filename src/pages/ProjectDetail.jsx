@@ -6,7 +6,9 @@ function ProjectDetail() {
 
   const { slug } = useParams()
 
-  const project = projects[slug]
+  const project = projects.find(
+  (project) => project.slug === slug
+  )
 
 if (!project) {
   return (
