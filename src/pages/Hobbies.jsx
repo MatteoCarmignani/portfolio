@@ -1,31 +1,31 @@
-import HobbyCard from '../components/HobbyCard'
+import { useState } from 'react'
 import './Hobbies.css'
 
 function Hobbies() {
 
+  const [selectedHobby, setSelectedHobby] = useState(null)
+
   const hobbies = [
     {
+      id: 1,
       title: 'Videogiochi',
+      image: '/hobbies/videogames.jpg',
       description:
-        'Mi piacciono videogiochi di generi diversi e mi interessa soprattutto scoprire nuovi mondi, meccaniche e modi di raccontare una storia.'
+        'I videogiochi sono una delle mie passioni principali. Mi piace giocare a generi diversi, scoprendo ogni volta mondi, storie e meccaniche di gioco differenti.'
     },
-
     {
-      title: 'Tecnologia',
-      description:
-        'Sono curioso delle nuove tecnologie e mi piace capire come funzionano gli strumenti che utilizzo ogni giorno.'
-    },
-
-    {
+      id: 2,
       title: 'Dungeons & Dragons',
+      image: '/hobbies/dnd.jpg',
       description:
-        'Mi piace giocare a D&D e creare personaggi, avventure e mondi insieme agli altri giocatori.'
+        'Dungeons & Dragons mi appassiona per la possibilità di creare storie, personaggi e mondi insieme ad altre persone. Mi piace soprattutto il lato creativo e narrativo del gioco.'
     },
-
     {
-      title: 'Fantasy',
+      id: 3,
+      title: 'Tecnologia',
+      image: '/hobbies/technology.jpg',
       description:
-        'Il fantasy è uno dei generi che preferisco, soprattutto per la possibilità di esplorare mondi e storie completamente diversi dalla realtà.'
+        'La tecnologia è una passione che mi ha portato anche ad avvicinarmi alla programmazione. Mi interessa scoprire nuovi strumenti e capire come vengono realizzate le applicazioni che utilizziamo ogni giorno.'
     }
   ]
 
@@ -38,19 +38,71 @@ function Hobbies() {
           Oltre il codice
         </p>
 
-        <h1>Hobby e passioni</h1>
+        <h1>
+          Hobby e passioni
+        </h1>
 
-        <div className="hobbies-list">
+        <p className="hobbies-intro">
+          Alcune delle cose che mi appassionano e che fanno parte
+          del mio tempo libero.
+        </p>
+
+        <div className="hobbies-grid">
 
           {hobbies.map((hobby) => (
-            <HobbyCard
-              key={hobby.title}
-              title={hobby.title}
-              description={hobby.description}
-            />
+            <div
+              key={hobby.id}
+              className="hobby-card"
+              onClick={() => setSelectedHobby(hobby)}
+            >
+
+              <img
+                src={hobby.image}
+                alt={hobby.title}
+              />
+
+              <h2>
+                {hobby.title}
+              </h2>
+
+            </div>
           ))}
 
         </div>
+
+        {selectedHobby && (
+          <div className="hobby-overlay">
+
+            <div className="hobby-modal">
+
+              <button
+                className="hobby-close"
+                onClick={() => setSelectedHobby(null)}
+              >
+                ×
+              </button>
+
+              <img
+                src={selectedHobby.image}
+                alt={selectedHobby.title}
+              />
+
+              <div className="hobby-modal-content">
+
+                <h2>
+                  {selectedHobby.title}
+                </h2>
+
+                <p>
+                  {selectedHobby.description}
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        )}
 
       </div>
 

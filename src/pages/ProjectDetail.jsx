@@ -136,7 +136,7 @@ function ProjectDetail() {
             href="#top"
             className="top-button"
           >
-            ↑ Torna in cima
+            ↑ Torna all'inizio
           </a>
 
           <Link
